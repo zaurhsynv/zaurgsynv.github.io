@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaur's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="content">
+        <header>
+            <h1>Zaur Hüseynov</h1>
+            <p class="subtitle">Cybersecurity Specialist</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#about">Haqqımda</a></li>
+                <li><a href="#skills">Bacarıqlar</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+        </nav>
+
+        <section id="about">
+            <h2>Haqqımda</h2>
+            <div class="about-content">
+                <p>Mən Zaur Hüseynov — rəqəmsal təhlükəsizlik sahəsində ixtisaslaşmış, motivasiyalı və inkişafyönlü bir mütəxəssisəm. Texnologiyaya olan dərin marağım məni informasiya təhlükəsizliyi aləminə gətirdi və bu sahədə Red Team əməliyyatları, web tətbiqi istismarları, Active Directory hücum analizləri və real dünya simulyasiyaları üzrə təcrübə qazanmağıma yol açdı.</p>
+
+                <p>Hazırda MilliSec komandasında Penetration Tester və Cybersecurity Red Team Mentor kimi fəaliyyət göstərirəm. Eyni zamanda ölkə daxilində gənclərin kibertəhlükəsizlik sahəsinə marağını artırmaq üçün seminarlar, CTF-lər və maarifləndirici təşəbbüslər təşkil edirəm. İştirak etdiyim forumlar, təqdimatlar və komandamla birgə həyata keçirdiyim layihələr bir məqsədə xidmət edir: Azərbaycanda rəqəmsal təhlükəsizlik mədəniyyətini inkişaf etdirmək.</p>
+                
+                <p>Bu platforma — təkcə portfoliomu deyil, həm də ideyalarımı, yanaşma tərzimi və kibertəhlükəsizlik dünyasına olan baxışımı əks etdirir. Burada həm texniki bloqlar, həm də şəxsi layihələrim, təqdimatlarım və maraqla çalışdığım sahələr yer alacaq.</p>
+                
+                <p>Mənə görə kibertəhlükəsizlik sadəcə bir sahə deyil — bir düşüncə tərzidir. Bu, texnologiyanın içində etika, analiz və insan amilinin vəhdətidir.</p>
+                
+                <p>Əgər sən də bu dünyaya maraqlısansa və ya əməkdaşlıq etmək istəyirsənsə — mənimlə <a href="#contact">Əlaqə</a> saxlamaqdan çəkinmə.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Bacarıqlar</h2>
+            <div class="skills-grid">
+                <div class="skill" onclick="window.location.href='skills/red-teaming/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="first-word">Red</span>
+                        </div>
+                        <span class="second-word">Teaming</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/web-security/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-globe"></i>
+                            <span class="first-word">Web</span>
+                        </div>
+                        <span class="second-word">Security</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/active-directory/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-network-wired"></i>
+                            <span class="first-word">Active</span>
+                        </div>
+                        <span class="second-word">Directory</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/social-engineering/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-user-secret"></i>
+                            <span class="first-word">Social</span>
+                        </div>
+                        <span class="second-word">Engineering</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/network-security/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-server"></i>
+                            <span class="first-word">Şəbəkə</span>
+                        </div>
+                        <span class="second-word">Təhlükəsizliyi</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/os-security/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-desktop"></i>
+                            <span class="first-word">OS</span>
+                        </div>
+                        <span class="second-word">Təhlükəsizliyi</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/python-scripting/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fab fa-python"></i>
+                            <span class="first-word">Python</span>
+                        </div>
+                        <span class="second-word">Scripting</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/bash-scripting/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-terminal"></i>
+                            <span class="first-word">Bash</span>
+                        </div>
+                        <span class="second-word">Scripting</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/powershell/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fas fa-terminal"></i>
+                            <span class="first-word">Power</span>
+                        </div>
+                        <span class="second-word">Shell</span>
+                    </div>
+                </div>
+                <div class="skill" onclick="window.location.href='skills/kali-linux/index.html'">
+                    <div class="skill-content">
+                        <div class="skill-header">
+                            <i class="fab fa-linux"></i>
+                            <span class="first-word">Kali</span>
+                        </div>
+                        <span class="second-word">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Əlaqə</h2>
+            <div class="contact-links">
+                <a href="mailto:zaurgsnv@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> E-poçt
+                </a>
+                <a href="https://github.com/zaurhsnv" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/zaur-h%C3%BCseynov-19073a29b/" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
