@@ -3,6 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zaur Hüseynov</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="content">
+        <header>
+            <h1>Əməliyyat Sistemləri Təhlükəsizliyi</h1>
+            <p class="subtitle">Dərinləşmiş Təhlil və Müdafiə Strategiyaları</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Ana Səhifə</a></li>
+                <li><a href="#about">Haqqımda</a></li>
+                <li><a href="#contact">Əlaqə</a></li>
+            </ul>
+        </nav>
+
+        <section id="content">
+            <h2>1. Giriş: Əməliyyat Sistemlərinin Təhlükəsizliyinin Rolu</h2>
+            <div class="article-content">
+                <p>Əməliyyat sistemləri (ƏS) bir kompüter sisteminin onurğa sütunu sayılır. Bu sistemlər istifadəçi ilə aparat vasitələri arasında körpü rolu oynayır və proqramların icrasını, resursların bölüşdürülməsini və təhlükəsizlik nəzarətini həyata keçirir. Əgər ƏS-in təhlükəsizliyi pozularsa, həmin cihazda çalışan hər bir proqram və məlumat risq altına düşür. Bu səbəbdən ƏS təhlükəsizliyi təşkilatın ümumi kiber təhlükəsizlik strategiyasının əsas sütunlarından biri olmalıdır.</p>
+
+                <h2>2. ƏS Təhlükəsizlik Arxitekturası</h2>
+                <h3>2.1. Kernel səviyyəsində təhlükəsizlik</h3>
+                <p>Əməliyyat sisteminin nüvəsi – kernel – bütün resurslara girişin əsas nəzarət nöqtəsidir. Kernel səviyyəsində təhlükəsizlik aşağıdakı əsas prinsiplərlə təmin edilir:</p>
+                <ul>
+                    <li><strong>Process Isolation (Proseslərin İzlolyasiyası)</strong></li>
+                    <li><strong>Memory Protection (Yaddaş Qorunması)</strong></li>
+                    <li><strong>System Call Filtering (Syscall nəzarəti)</strong></li>
+                    <li><strong>Least Privilege Access (Ən Aşağı İcazə prinsipi)</strong></li>
+                </ul>
+
+                <h3>2.2. Userland səviyyəsində təhlükəsizlik</h3>
+                <p>Userland – istifadəçinin birbaşa işlədiyi qatdır. Bu qatdakı təhlükəsizlik tədbirləri:</p>
+                <ul>
+                    <li>User Account Control (UAC) və RBAC</li>
+                    <li>Security Policy Enforcement (Güclü siyasətlərin tətbiqi)</li>
+                    <li>Application Whitelisting və Blacklisting</li>
+                </ul>
+
+                <h2>3. ƏS Təhlə Modelləri və Hücum Vektorları</h2>
+                <h3>3.1. Əməliyyat sisteminə qarşı əsas hücum növləri</h3>
+                <table>
+                    <tr>
+                        <th>Hücum Növü</th>
+                        <th>Təsviri</th>
+                    </tr>
+                    <tr>
+                        <td>Privilege Escalation</td>
+                        <td>İstifadəçinin icazəsini artıraraq sistem səviyyəsində nəzarət əldə etməsi</td>
+                    </tr>
+                    <tr>
+                        <td>Buffer Overflow</td>
+                        <td>Yaddaş sahələrinə zərərli kod yükləmə yolu ilə nəzarəti ələ keçirmə</td>
+                    </tr>
+                    <tr>
+                        <td>Rootkit</td>
+                        <td>Sistemə dərinlikdə yerləşdirilən və görünməz qalan zərərli proqram</td>
+                    </tr>
+                    <tr>
+                        <td>Kernel Exploit</td>
+                        <td>ƏS-nin nüvəsindəki zəiflikdən istifadə edərək sistemin tam nəzarətini alma</td>
+                    </tr>
+                    <tr>
+                        <td>DLL Injection / Library Hijacking</td>
+                        <td>Sistem kitabxanalarının dəyişdirilməsi ilə zərərli kodun yeridilməsi</td>
+                    </tr>
+                </table>
+
+                <h2>4. ƏS Təhlükəsizlik Mexanizmləri və Texnologiyalar</h2>
+                <h3>4.1. Mandatory Access Control (MAC) modelləri</h3>
+                <ul>
+                    <li><strong>SELinux (Security-Enhanced Linux):</strong> Qaydalara əsaslanan icazə modeli</li>
+                    <li><strong>AppArmor:</strong> Profil əsaslı tətbiq nəzarəti</li>
+                    <li><strong>Windows Integrity Control:</strong> Objektdən istifadə hüquqlarını təyin edir</li>
+                </ul>
+
+                <h3>4.2. Antivirus və Endpoint Detection & Response (EDR)</h3>
+                <p>EDR sistemləri yalnız virus aşkarlamır, həm də davranış təhlili apararaq şübhəli fəaliyyətləri müəyyən edir.</p>
+                <ul>
+                    <li>BitDefender</li>
+                    <li>CrowdStrike</li>
+                    <li>Microsoft Defender for Endpoint</li>
+                </ul>
+
+                <h3>4.3. Sandboxing və Virtualization</h3>
+                <p>Zərərli fəaliyyətlərə qarşı tətbiqləri izolyasiya etmək üçün istifadə olunur. Məsələn:</p>
+                <ul>
+                    <li>Windows Sandbox</li>
+                    <li>Docker konteynerləri</li>
+                    <li>Qubes OS (Security through Isolation)</li>
+                </ul>
+
+                <h2>5. OS-lər üzrə spesifik təhlükəsizlik xüsusiyyətləri</h2>
+                <h3>5.1. Windows Təhlükəsizlik Xüsusiyyətləri</h3>
+                <ul>
+                    <li>Group Policy Objects (GPO)</li>
+                    <li>Credential Guard və Device Guard</li>
+                    <li>NTFS Permission Set</li>
+                    <li>Windows Defender Exploit Guard</li>
+                </ul>
+
+                <h3>5.2. Linux Təhlükəsizlik Xüsusiyyətləri</h3>
+                <ul>
+                    <li>iptables və nftables</li>
+                    <li>SELinux/AppArmor</li>
+                    <li>Auditd log sistemi</li>
+                    <li>Kernel security modules (LSM)</li>
+                </ul>
+
+                <h3>5.3. macOS Təhlükəsizlik Arxitekturası</h3>
+                <ul>
+                    <li>System Integrity Protection (SIP)</li>
+                    <li>XProtect və Gatekeeper</li>
+                    <li>Apple T2 Security Chip</li>
+                </ul>
+
+                <h2>6. Audit, Logging və Təhlükəsizlik Monitorinqi</h2>
+                <h3>6.1. Audit mexanizmləri</h3>
+                <ul>
+                    <li>Syslog (Linux)</li>
+                    <li>Event Viewer (Windows)</li>
+                    <li>auditd və aureport (Linux kernel auditing)</li>
+                </ul>
+
+                <h3>6.2. SIEM inteqrasiyası</h3>
+                <p>ƏS logları SIEM (Security Information and Event Management) sistemlərinə yönləndirilərək real-time təhlil edilir.</p>
+                <ul>
+                    <li>Splunk</li>
+                    <li>Graylog</li>
+                    <li>ELK Stack (Elastic, Logstash, Kibana)</li>
+                </ul>
+
+                <h2>7. ƏS Təhlükəsizliyində Yenilənmələr və Patch Management</h2>
+                <h3>7.1. Patch-ləmə Strategiyası</h3>
+                <ul>
+                    <li>Automated patch deployment (WSUS, Landscape, yum-cron)</li>
+                    <li>Critical Patch Management Cycle</li>
+                    <li>Vulnerability scanning ilə uyğunlaşdırma (Nessus, OpenVAS)</li>
+                </ul>
+
+                <h2>8. Real Dünyadan Təhlükəsizlik Hadisələri</h2>
+                <ul>
+                    <li><strong>Stuxnet:</strong> Windows SCADA sistemlərinə yönəlmiş kernel rootkit hücumu</li>
+                    <li><strong>Dirty COW:</strong> Linux Kernel Privilege Escalation</li>
+                    <li><strong>NotPetya:</strong> Windows sistemlərini şəbəkədə lateral hərəkətlə ələ keçirmə</li>
+                </ul>
+
+                <h2>9. ƏS Təhlükəsizliyi üçün Sertifikatlar və Təlimlər</h2>
+                <table>
+                    <tr>
+                        <th>Sertifikat</th>
+                        <th>Məzmun</th>
+                    </tr>
+                    <tr>
+                        <td>CompTIA Security+</td>
+                        <td>Əsas ƏS təhlükəsizlik prinsipləri</td>
+                    </tr>
+                    <tr>
+                        <td>GCWN</td>
+                        <td>Windows təhlükəsizlik konfiqurasiyası</td>
+                    </tr>
+                    <tr>
+                        <td>Linux+ / LPIC-2 Security Track</td>
+                        <td>Linux sistemlərinin qorunması</td>
+                    </tr>
+                    <tr>
+                        <td>OSCP / OSEP</td>
+                        <td>ƏS zəifliklərinin istismarı və real hücum simulyasiyaları</td>
+                    </tr>
+                </table>
+
+                <h2>10. Gələcək Perspektivlər</h2>
+                <ul>
+                    <li>Zero Trust ƏS Arxitekturaları</li>
+                    <li>AI əsaslı hücum aşkarlanması</li>
+                    <li>Quantum-resistant cryptography</li>
+                    <li>Edge Device OS-lərin təhlükəsizliyi (IoT, ICS)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Əlaqə</h2>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> E-poçt
+                </a>
+                <a href="https://github.com/yourusername" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/yourusername" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OS Security - Zaur's Portfolio</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
