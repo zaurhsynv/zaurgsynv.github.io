@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Security - Zaur Hüseynov</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Web Security - Zaur's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -12,53 +12,205 @@
     <div class="content">
         <header>
             <h1>Web Security</h1>
-            <p class="subtitle">Web Application Security</p>
+            <p class="subtitle">Veb Tətbiqlərin Təhlükəsizlik Strategiyaları və Taktikaları</p>
         </header>
         
         <nav>
             <ul>
-                <li><a href="../../index.html">Ana Səhifə</a></li>
+                <li><a href="index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>Web Security Haqqında</h2>
-            <div class="about-content">
-                <p>Web Security, web tətbiqlərinin təhlükəsizliyini təmin etmək və potensial zəiflikləri aşkar etmək üçün istifadə olunan metodlar və texnologiyalar toplusudur.</p>
+        <section id="content">
+            <h2>Giriş: Web Təhlükəsizliyin Əhəmiyyəti</h2>
+            <div class="article-content">
+                <p>Web tətbiqləri müasir dövrdə istər şəxsi, istərsə də korporativ səviyyədə informasiya mübadiləsinin əsas mərkəzinə çevrilmişdir. Məlumat bazaları, istifadəçi hesabları, maliyyə əməliyyatları və daha çoxu bu tətbiqlər üzərindən həyata keçirilir. Nəticə olaraq, web tətbiqlər hücumçular üçün ən cəlbedici hədəflərdən birinə çevrilir.</p>
 
-                <p>Web Security sahəsində əsas fokus nöqtələri:</p>
+                <h2>Təhlükə Spektri: Ən Yayılan Hücum Növləri</h2>
+                <h3>SQL Injection</h3>
+                <p>İnput sahələri düzgün filtrlənmədikdə, hücumçular SQL sorğularını manipulyasiya edərək məlumat bazasına müdaxilə edə bilərlər. Bu, istifadəçi məlumatlarının oğurlanmasına, dəyişdirilməsinə və ya silinməsinə səbəb ola bilər.</p>
+                <pre><code>admin' OR '1'='1</code></pre>
+
+                <h3>Cross-Site Scripting (XSS)</h3>
+                <p>Bu hücum növü, istifadəçilərin brauzerində zərərli skriptlərin icra olunmasına imkan verir. XSS sayəsində hücumçu session cookie-ləri oğurlaya və ya istifadəçiyə zərərli linklər göndərə bilər.</p>
+
+                <h3>Cross-Site Request Forgery (CSRF)</h3>
+                <p>CSRF hücumunda, istifadəçi login olmuş halda zərərli bir sorğunu bilmədən serverə göndərir. Əgər tətbiq CSRF token istifadə etmirsə, bu əməliyyat uğurla həyata keçirilə bilər.</p>
+
+                <h3>Command Injection</h3>
+                <p>Komanda inyeksiyası zamanı hücumçu serverdə əmrlərin icrasına nail olur. Bu tip hücumlar əsasən eval(), exec(), system() funksiyaları üzərindən həyata keçirilir.</p>
+
+                <h3>Directory Traversal</h3>
+                <p>Bu metodla hücumçu serverdəki sistem fayllarına çıxış əldə edə bilər. Məsələn:</p>
+                <pre><code>../../../etc/passwd</code></pre>
+
+                <h2>OWASP Top 10: Web Təhlükəsizlik Standartları</h2>
+                <p>OWASP (Open Web Application Security Project) təşkilatı tərəfindən yayımlanan "Top 10" siyahısı ən kritik web tətbiq zəifliklərini əhatə edir:</p>
+                <ol>
+                    <li>Broken Access Control</li>
+                    <li>Cryptographic Failures</li>
+                    <li>Injection</li>
+                    <li>Insecure Design</li>
+                    <li>Security Misconfiguration</li>
+                    <li>Vulnerable and Outdated Components</li>
+                    <li>Identification and Authentication Failures</li>
+                    <li>Software and Data Integrity Failures</li>
+                    <li>Security Logging and Monitoring Failures</li>
+                    <li> Server-Side Request Forgery (SSRF)</li>
+                </ol>
+
+                <h2>Təhlükəsizlik Mimarisi: Müdafiə Strategiyaları</h2>
+                <h3>Input Validation və Sanitization</h3>
+                <p>İstifadəçi daxil etdiyi bütün məlumatlar ciddi şəkildə yoxlanılmalı və zərərli kodların daxil edilməsinin qarşısı alınmalıdır.</p>
+
+                <h3>Access Control və Role-Based Access (RBAC)</h3>
+                <p>Hər istifadəçiyə yalnız ehtiyac duyduğu səviyyədə icazə verilməlidir. "Least Privilege" prinsipi əsas alınmalıdır.</p>
+
+                <h3>HTTPS və TLS</h3>
+                <p>Məlumatların şifrələnməsi üçün SSL/TLS sertifikatları istifadə olunmalı və HTTP Strict Transport Security (HSTS) konfiqurasiya edilməlidir.</p>
+
+                <h3>Security Headers</h3>
+                <p>Müasir brauzerlər üçün təhlükəsizlik başlıqları tətbiq olunmalıdır:</p>
                 <ul>
-                    <li>OWASP Top 10 zəifliklərinin analizi</li>
-                    <li>Web tətbiqlərinin penetrasiya testləri</li>
-                    <li>API təhlükəsizliyi</li>
-                    <li>Cross-Site Scripting (XSS) müdafiəsi</li>
-                    <li>SQL Injection qarşısının alınması</li>
-                    <li>Web Application Firewall (WAF) konfiqurasiyası</li>
+                    <li>Content-Security-Policy (CSP)</li>
+                    <li>X-Frame-Options</li>
+                    <li>X-XSS-Protection</li>
+                    <li>Referrer-Policy</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Web Təhlükəsizliyi Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Web Application Firewall</h3>
-                    <p>ModSecurity istifadə edərək web tətbiqləri üçün WAF qurulması və konfiqurasiyası.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
-                <div class="project-card">
-                    <h3>SSL/TLS Audit</h3>
-                    <p>Web saytlarının SSL/TLS konfiqurasiyasının təhlil edilməsi və təhlükəsizlik açıqlarının aşkarlanması.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
-                <div class="project-card">
-                    <h3>OWASP Top 10 Testləri</h3>
-                    <p>Web tətbiqlərinin OWASP Top 10 təhlükəsizlik açıqlarına qarşı test edilməsi və hesabat hazırlanması.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>Təhlükəsizlik Alətləri və Kitabxanalar</h2>
+                <table>
+                    <tr>
+                    <th>Kateqoriya</th>
+                    <th>Alətlər</th>
+                    </tr>
+                    <tr>
+                        <td>Skaner</td>
+                        <td>Nikto, Wapiti, Acunetix</td>
+                    </tr>
+                    <tr>
+                        <td>Burp Suite Pluginləri</td>
+                        <td>Logger++, ActiveScan++, Turbo Intruder</td>
+                    </tr>
+                    <tr>
+                        <td>Sızma Testi</td>
+                        <td>XSStrike, SQLMap, Commix</td>
+                    </tr>
+                    <tr>
+                        <td>Monitoring və Logging</td>
+                        <td>ELK Stack, Graylog, Splunk</td>
+                    </tr>
+                </table>
+
+                <h2>Real Dünyadan Nümunələr</h2>
+                <h3>Yahoo (2013–2014)</h3>
+                <p>Bir XSS zəifliyi nəticəsində yüz milyonlarla istifadəçi məlumatı oğurlanmışdı.</p>
+
+                <h3>Capital One (2019)</h3>
+                <p>AWS misconfig səbəbilə hücumçu S3 bucket-lərə giriş əldə edərək 100 milyondan çox müştəri məlumatını oğurladı.</p>
+
+                <h3>British Airways (2018)</h3>
+                <p>Magecart hücumu ilə ödəniş məlumatları 380,000-dən çox müştəridən oğurlandı.</p>
+
+                <h2>Nəticə</h2>
+                <p>Web Security yalnız texniki məsələ deyil – bu, istifadəçi etibarını qorumağın, məlumat təhlükəsizliyini təmin etməyin və hüquqi məsuliyyətdən yayınmağın əsas yoludur. Təhlükəsizlik heç zaman tək bir auditlə yekunlaşmır – bu davamlı prosesdir. Tətbiqlərin həyat dövrünün hər mərhələsində təhlükəsizlik əsas dəyər olaraq qalmalıdır.</p>
+
+                <h2>Tövsiyələr və Ən Yaxşı Təcrübələr</h2>
+                <h3>Secure-by-Design Yanaşması</h3>
+                <p>Web tətbiq hazırlanmasının ilk mərhələsindən etibarən təhlükəsizlik əsas prinsip kimi qəbul olunmalıdır. Kodlaşdırmadan əvvəl təhlükəsizlik riskləri nəzərə alınmalı, dizayn sənədlərində məlumat axınları və hücum səthləri aydın şəkildə qeyd olunmalıdır.</p>
+
+                <h3>Kod Baxışları və Static Analysis</h3>
+                <p>Kod yazıldıqdan sonra manual və ya alətlərlə (məsələn, SonarQube, Semgrep) kodun təhlükəsizlik baxımından təhlili aparılmalıdır. Bu, zəifliklərin erkən mərhələdə aşkar edilməsinə kömək edir.</p>
+
+                <h3>Dependency Management və Software Composition Analysis</h3>
+                <p>Üçüncü tərəf kitabxanaları daim yenilənməlidir. OWASP Dependency-Check, Snyk, və ya Dependabot vasitəsilə zəif versiyalar avtomatik təyin olunub yenilənə bilər.</p>
+
+                <h3>Loglama və Monitoring</h3>
+                <p>Hər bir vacib əməliyyat üçün audit izi saxlanılmalı, anomal davranışlar real-time təhlil olunmalıdır. Brute-force hücumlar, login uğursuzluqları və məlumat axını loglanmalıdır. Bu məlumatlar SIEM sistemlərinə ötürülməlidir.</p>
+
+                <h3>Bug Bounty və VDP Proqramları</h3>
+                <p>Tətbiqinizi ictimaiyyətə təqdim etdikdən sonra VDP (Vulnerability Disclosure Policy) və ya bug bounty proqramı elan etməklə daha geniş təhlükəsizlik araşdırmalarını təşviq edə bilərsiniz. Platformalar: HackerOne, Bugcrowd, Intigriti.</p>
+
+                <h2>Web Tətbiqlərin Təhlükəsiz Arxitekturası: Bir Nümunə</h2>
+                <p>Aşağıdakı best-practice arxitektura təhlükəsizlik baxımından gücləndirilmiş web tətbiq dizaynını əks etdirir:</p>
+                <ul>
+                    <li><strong>Frontend (React/Vue)</strong> – Yalnız minimal məlumat saxlayır. LocalStorage yerinə HttpOnly cookie istifadə olunur.</li>
+                    <li><strong>Backend (Node.js/Django)</strong> – REST API-lər CSRF və rate limiting ilə qorunur.</li>
+                    <li><strong>Reverse Proxy (NGINX)</strong> – SSL termination, redirect rules və security headers buradan tənzimlənir.</li>
+                    <li><strong>WAF (Web Application Firewall)</strong> – Hücum pattern-ləri bloklanır. Məsələn: AWS WAF, Cloudflare WAF.</li>
+                    <li><strong>Database Layer</strong> – Parameterized queries və minimal user permissions.</li>
+                    <li><strong>Logging & Monitoring</strong> – ELK Stack ilə real-time təhlükə təhlili və alert mexanizmləri.</li>
+                </ul>
+
+                <h2>İxtisaslaşma Yol Xəritəsi: Web Təhlükəsizlik üzrə Karyera</h2>
+                <h3>Başlanğıc</h3>
+                <ul>
+                    <li>HTML, CSS, JavaScript əsasları</li>
+                    <li>HTTP, URL strukturu, cookie və session prinsipi</li>
+                    <li>OWASP Top 10 ilə tanışlıq</li>
+                    <li>TryHackMe və HackTheBox əsas modulları</li>
+                </ul>
+
+                <h3>Orta səviyyə</h3>
+                <ul>
+                    <li>Burp Suite professional istifadə</li>
+                    <li>XSS, CSRF, SQLi, IDOR real-case tətbiqlər</li>
+                    <li>API zəiflikləri (Broken Object Level Authorization və s.)</li>
+                    <li>Github'dakı CVE-lərin analizi</li>
+                </ul>
+
+                <h3>Yüksək səviyyə</h3>
+                <ul>
+                    <li>Source code audit</li>
+                    <li>DevSecOps inteqrasiyası</li>
+                    <li>SSRF, Race Condition, Logic Bug təhlili</li>
+                    <li>Sertifikatlar (OSWE, eWPTXv3, GWAPT)</li>
+                </ul>
+
+                <h2>Azərbaycan Kontekstində Web Təhlükəsizliyi: Dövlət Qurumları Fokusunda</h2>
+                <p>Azərbaycanın rəqəmsal transformasiya siyasəti çərçivəsində dövlət qurumları sürətlə elektron hökumət (e-Gov) sistemlərinə keçid edir. Portallar, xidmət platformaları, onlayn qeydiyyat sistemləri və vətəndaşla əlaqə kanalları artıq veb əsaslıdır. Bu isə eyni zamanda dövlət sektorunu potensial kiber hücumlar üçün əsas hədəfə çevirir.</p>
+
+                <h3>Əsas Təhlükələr</h3>
+                <p>Dövlət qurumlarına qarşı hücumlar aşağıdakı məqsədlərlə həyata keçirilə bilər:</p>
+                <ul>
+                    <li><strong>Məlumat sızması:</strong> Vətəndaş məlumat bazalarının (şəxsiyyət vəsiqəsi, pasport, vergi, sağlamlıq) oğurlanması.</li>
+                    <li><strong>Xidmətin dayandırılması (DoS/DDoS):</strong> Dövlət portallarının fəaliyyətinin iflic edilməsi.</li>
+                    <li><strong>Deface və ya imicə zərər:</strong> Saytların ön səhifəsinin dəyişdirilərək ictimai panika və ya siyasi mesaj yayılması.</li>
+                    <li><strong>Zərərli kodun yerləşdirilməsi:</strong> İstifadəçilərin brauzerlərinə yönəlik zərərli skriptlərin inject olunması.</li>
+                </ul>
+
+                <h3>Cari Çətinliklər</h3>
+                <ul>
+                    <li><strong>Resurs çatışmazlığı</strong> – Bir çox dövlət qurumunda xüsusi təhlükəsizlik komandası və ya SOC (Security Operations Center) mövcud deyil.</li>
+                    <li><strong>Köhnəlmiş texnologiyalar</strong> – Legacy sistemlər və zəif təhlükəsizlik praktikaları hələ də geniş yayılıb.</li>
+                    <li><strong>Audit boşluqları</strong> – Web tətbiqlərinə dair penetrasiya testləri ya ümumiyyətlə aparılmır, ya da formal şəkildə həyata keçirilir.</li>
+                    <li><strong>Zəif konfiqurasiya və izləmə</strong> – Web serverlərdə təhlükəsizlik başlıqları, WAF, HSTS kimi əsas tədbirlər çox vaxt tətbiq edilmir.</li>
+                </ul>
+
+                <h3>Dövlət üçün Tövsiyələr</h3>
+                <ul>
+                    <li><strong>Milli Web Təhlükəsizlik Standartları</strong> – Dövlət İT sistemləri üçün OWASP Top 10 əsasında lokal təhlükəsizlik çərçivəsi hazırlanmalıdır.</li>
+                    <li><strong>Mərkəzləşdirilmiş SOC və SIEM</strong> – Əsas qurumlar üçün ortaq bir Təhlükəsizlik Əməliyyat Mərkəzi (SOC) yaradılaraq bütün giriş-çıxışların izlənməsi təmin olunmalıdır.</li>
+                    <li><strong>Mütəmadi Pentest Proqramları</strong> – İllik və ya yarımillik penetration test planları dövlət səviyyəsində tənzimlənməli və nəticələr hesabatlandırılmalıdır.</li>
+                    <li><strong>DevSecOps Mədəniyyəti</strong> – Dövlətin proqram təminatı komandaları DevSecOps yanaşmasını mənimsəməli və təhlükəsizlik CI/CD axınlarına inteqrasiya olunmalıdır.</li>
+                    <li><strong>Təlim və Sertifikatlaşma</strong> – Dövlət İT işçiləri üçün web təhlükəsizlik üzrə mütəmadi təlimlər təşkil edilməli, eWPT, GWAPT kimi sertifikatlarla motivasiya artırılmalıdır.</li>
+                </ul>
+
+                <h3>Müsbət Nümunələr və İrəliləyişlər</h3>
+                <ul>
+                    <li><strong>DİA və E-GOV portalının təkmilləşdirilməsi</strong> – Son illərdə E-Gov infrastrukturu üzərində görülən işlər nəticəsində daha təhlükəsiz protokollar və identifikasiya metodları tətbiq olunur.</li>
+                    <li><strong>AzInTelecom SOC</strong> – Dövlət bulud sistemləri üçün qurulan bu mərkəz təhlükələrin analizi və cavablandırılması üçün əhəmiyyətlidir.</li>
+                </ul>
+
+                <h2>Əlavə Resurslar və Tövsiyə Olunan Kitablar</h2>
+                <ul>
+                    <li>The Web Application Hacker's Handbook – Dafydd Stuttard, Marcus Pinto</li>
+                    <li>Web Security for Developers – Malcolm McDonald</li>
+                    <li>Real-World Bug Hunting – Peter Yaworski</li>
+                    <li>OWASP Testing Guide</li>
+                </ul>
             </div>
         </section>
 
@@ -77,6 +229,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
