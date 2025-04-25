@@ -3,62 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Security - Zaur's Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Şəbəkə Təhlükəsizliyi - Zaur's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
     <div class="content">
         <header>
-            <h1>Network Security</h1>
-            <p class="subtitle">Şəbəkə Təhlükəsizliyi</p>
+            <h1>Şəbəkə Təhlükəsizliyi</h1>
+            <p class="subtitle">İnfrastrukturun Mühafizəsində Strategiyalar, Texnologiyalar və Risklər</p>
         </header>
         
         <nav>
             <ul>
-                <li><a href="../../index.html">Ana Səhifə</a></li>
+                <li><a href="index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>Network Security Haqqında</h2>
-            <div class="about-content">
-                <p>Network Security, şəbəkə infrastrukturunun təhlükəsizliyini təmin etmək üçün istifadə olunan metodlar və texnologiyalar toplusudur.</p>
+        <section id="content">
+            <h2>1. Giriş: Şəbəkə Təhlükəsizliyinin Önəmi</h2>
+            <div class="article-content">
+                <p>Şəbəkə təhlükəsizliyi, istənilən informasiya texnologiyaları infrastrukturu üçün kritik komponentdir. Bu sahə, verilənlərin, resursların və xidmətlərin kənar və daxili təhdidlərdən qorunmasını təmin edir. Müasir dövrdə hökumət qurumları, korporasiyalar və fərdi istifadəçilər üçün şəbəkələr yalnız məlumat ötürən vasitə deyil, eyni zamanda dayanıqlı fəaliyyətin və milli təhlükəsizliyin təməlidir.</p>
 
-                <p>Network Security sahəsində əsas fokus nöqtələri:</p>
+                <p>Xüsusilə dövlət orqanları üçün — müdafiə, daxili işlər, maliyyə və strateji resursların idarəedilməsi sahələrində — şəbəkə infrastrukturlarının təhlükəsizliyi milli maraqların qorunmasında əsas yer tutur.</p>
+
+                <h2>2. Şəbəkə Təhlükəsizliyinin Əsas Məqsədləri</h2>
                 <ul>
-                    <li>Firewall konfiqurasiyası və idarəetməsi</li>
-                    <li>Intrusion Detection/Prevention Systems (IDS/IPS)</li>
-                    <li>Virtual Private Networks (VPN)</li>
-                    <li>Network Access Control (NAC)</li>
-                    <li>Şəbəkə monitorinqi və analizi</li>
-                    <li>Wireless təhlükəsizliyi</li>
+                    <li><strong>Confidentiality (Məxfilik):</strong> Məlumatlara yalnız səlahiyyətli şəxslərin çıxışını təmin etmək.</li>
+                    <li><strong>Integrity (Bütövlük):</strong> Məlumatın dəyişdirilmədiyindən və saxtalaşdırılmadığından əmin olmaq.</li>
+                    <li><strong>Availability (Əlçatanlıq):</strong> Məlumat və resursların tələb olunan zaman əlçatan olmasını təmin etmək.</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Şəbəkə Təhlükəsizliyi Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Şəbəkə Segmentasiyası</h3>
-                    <p>Böyük şirkət şəbəkəsinin VLAN və firewall qaydaları ilə təhlükəsiz seqmentasiyası.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
-                <div class="project-card">
-                    <h3>VPN İnfrastrukturu</h3>
-                    <p>Uzaqdan iş üçün təhlükəsiz VPN həllinin qurulması və konfiqurasiyası.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
-                <div class="project-card">
-                    <h3>İntrusion Detection Sistemi</h3>
-                    <p>Suricata istifadə edərək şəbəkə təhlükə aşkarlama sisteminin qurulması.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>3. Şəbəkə Hücumlarının Növləri</h2>
+                <h3>3.1. Passive Attacks (Pasyon Hücumlar)</h3>
+                <ul>
+                    <li><strong>Traffic Analysis:</strong> Paketləri oxumadan, ötürülən məlumatlar haqqında statistik analiz aparılır.</li>
+                    <li><strong>Sniffing:</strong> Məlumat paketləri ələ keçirilərək istifadəçi şifrələri və digər həssas məlumatlar əldə edilir (məsələn, Wireshark ilə).</li>
+                </ul>
+
+                <h3>3.2. Active Attacks (Aktiv Hücumlar)</h3>
+                <ul>
+                    <li><strong>DoS və DDoS:</strong> Xidmətin dayanmasına səbəb olan hücumlardır.</li>
+                    <li><strong>MITM (Man-in-the-Middle):</strong> İki tərəf arasındakı rabitəyə üçüncü bir tərəfin müdaxiləsi.</li>
+                    <li><strong>ARP Spoofing / Poisoning:</strong> Yönləndirmələri manipulyasiya edərək trafiki oğurlamaq.</li>
+                    <li><strong>DNS Hijacking:</strong> Domen adlarının təhrif edilməsi və saxta səhifələrə yönləndirilmə.</li>
+                </ul>
+
+                <h2>4. Şəbəkə Təhlükəsizliyi Texnologiyaları və Vasitələri</h2>
+                <h3>4.1. Firewall (Oddivar)</h3>
+                <ul>
+                    <li><strong>Stateful Firewall:</strong> Trafik vəziyyətini izləyən və qərarları kontekstə əsasən verən firewall növü.</li>
+                    <li><strong>Next-Generation Firewall (NGFW):</strong> Ağıllı təhdid aşkarlanması, IDS/IPS və tətbiq səviyyəsində nəzarəti özündə birləşdirir.</li>
+                </ul>
+
+                <h3>4.2. Intrusion Detection/Prevention Systems (IDS/IPS)</h3>
+                <ul>
+                    <li><strong>IDS:</strong> Şübhəli trafik aşkarlanır, lakin dayandırılmır.</li>
+                    <li><strong>IPS:</strong> Aşkarlanan trafik dərhal bloklanır.</li>
+                </ul>
+
+                <h3>4.3. Network Access Control (NAC)</h3>
+                <p>Təkcə istifadəçi şifrəsi deyil, cihazın statusuna, antivirusun olub-olmamasına və lokasiyaya görə şəbəkəyə giriş icazəsi verir.</p>
+
+                <h3>4.4. SIEM Sistemləri</h3>
+                <p>Security Information and Event Management (SIEM) sistemləri hadisələrin mərkəzləşdirilmiş şəkildə toplanması, analizi və cavablandırılmasını təmin edir (məsələn, Splunk, ELK, QRadar).</p>
+
+                <h2>5. Şəbəkə Təhlükəsizliyi Protokolları</h2>
+                <table>
+                    <tr>
+                        <th>Protokol</th>
+                        <th>Təyinat</th>
+                        <th>Şərh</th>
+                    </tr>
+                    <tr>
+                        <td>IPSec</td>
+                        <td>VPN-lər üçün təhlükəsiz rabitə</td>
+                        <td>Paket səviyyəsində şifrələmə</td>
+                    </tr>
+                    <tr>
+                        <td>SSL/TLS</td>
+                        <td>HTTPS, e-poçt, VoIP</td>
+                        <td>Sessiya səviyyəsində şifrələmə</td>
+                    </tr>
+                    <tr>
+                        <td>802.1X</td>
+                        <td>NAC sistemləri üçün identifikasiya</td>
+                        <td>Əsasən Wi-Fi və LAN üçün</td>
+                    </tr>
+                    <tr>
+                        <td>SSH</td>
+                        <td>Uzaqdan giriş</td>
+                        <td>Telnet-ə alternativ olaraq təhlükəsiz protokol</td>
+                    </tr>
+                </table>
+
+                <h2>6. Dövlət və Kritik İnfrastrukturların Müdafiəsi</h2>
+                <h3>6.1. SCADA və ICS Sistemləri</h3>
+                <p>Elektrik, su, nəqliyyat kimi infrastruktur sahələrində istifadə edilən SCADA sistemləri, tez-tez zəif autentifikasiya və açıq protokollar səbəbilə hücum hədəfinə çevrilirlər. Bu səbəbdən onların şəbəkədən izolyasiyası və xüsusi firewall-lar vasitəsilə qorunması vacibdir.</p>
+
+                <h3>6.2. Milli CERT-lər və Müdaxilə Qrupları</h3>
+                <p>Dövlət qurumlarında SOC (Security Operations Center) və CERT (Computer Emergency Response Team) strukturlarının formalaşdırılması təhlükəsizliyin davamlı monitorinqini təmin edir.</p>
+
+                <h2>7. Şəbəkə Səviyyəsində Segmentasiya və Mikrosegmentasiya</h2>
+                <ul>
+                    <li><strong>Traditional VLAN Segmentasiyası:</strong> Müxtəlif sistem və istifadəçiləri izolyasiya edərək daxili təhdidlərin yayılmasının qarşısını alır.</li>
+                    <li><strong>Mikrosegmentasiya:</strong> Hətta eyni VLAN daxilində olan sistemlər arasında da detallı icazə və nəzarət tətbiq edir (xüsusilə Zero Trust modelində əhəmiyyətli).</li>
+                </ul>
+
+                <h2>8. Hücum Simulyasiyası və Test Yanaşmaları</h2>
+                <h3>8.1. Network Penetration Testing</h3>
+                <ul>
+                    <li><strong>Recon:</strong> Nmap, Masscan, Shodan</li>
+                    <li><strong>Enumeration:</strong> Netcat, Enum4linux</li>
+                    <li><strong>Exploitation:</strong> Metasploit, Hydra, CrackMapExec</li>
+                    <li><strong>Post-Exploitation:</strong> Data exfiltration, lateral movement</li>
+                </ul>
+
+                <h3>8.2. Red Teaming</h3>
+                <p>Real ssenariyə bənzər şəkildə APT hücumlarının simulyasiyası və mavi komanda ilə qarşılıqlı fəaliyyət.</p>
+
+                <h3>8.3. Purple Teaming</h3>
+                <p>Red və Blue team-lərin birgə işləməsi, zəifliklərin eyni anda aşkarlanması və müdafiə tədbirlərinin gücləndirilməsi.</p>
+
+                <h2>9. Təhlükəsizlik Strategiyaları və Yaxşı Təcrübələr</h2>
+                <ul>
+                    <li><strong>Zero Trust Architecture:</strong> "Heç kimə güvənmə, hər şeyi yoxla" prinsipinə əsaslanır.</li>
+                    <li><strong>Defense in Depth:</strong> Çoxsəviyyəli təhlükəsizlik tədbirləri ilə redundans və etibarlılıq.</li>
+                    <li><strong>Least Privilege Model:</strong> İstifadəçiyə yalnız iş üçün lazım olan qədər icazə verilməsi.</li>
+                </ul>
+
+                <h2>10. Şəbəkə Təhlükəsizliyi üzrə Sertifikatlar və Platformalar</h2>
+                <table>
+                    <tr>
+                        <th>Sertifikat</th>
+                        <th>Təşkilat</th>
+                        <th>Fokus</th>
+                    </tr>
+                    <tr>
+                        <td>CompTIA Security+</td>
+                        <td>CompTIA</td>
+                        <td>Giriş səviyyəsi</td>
+                    </tr>
+                    <tr>
+                        <td>CCNA Security</td>
+                        <td>Cisco</td>
+                        <td>Cisco yönümlü praktika</td>
+                    </tr>
+                    <tr>
+                        <td>CEH</td>
+                        <td>EC-Council</td>
+                        <td>Hücum texnikaları</td>
+                    </tr>
+                    <tr>
+                        <td>OSCP / OSCE</td>
+                        <td>Offensive Security</td>
+                        <td>Real-world pentest</td>
+                    </tr>
+                    <tr>
+                        <td>CND</td>
+                        <td>EC-Council</td>
+                        <td>Müdafiə yönümlü</td>
+                    </tr>
+                </table>
+
+                <h3>Platformalar:</h3>
+                <ul>
+                    <li>HackTheBox</li>
+                    <li>TryHackMe</li>
+                    <li>RangeForce</li>
+                    <li>Cyber Ranges</li>
+                </ul>
+
+                <h2>11. Gələcək Təhdidlər və Trendlər</h2>
+                <ul>
+                    <li>AI ilə gücləndirilmiş hücumlar və müdafiə sistemləri</li>
+                    <li>IoT şəbəkələrinin artan riskləri</li>
+                    <li>5G və yeni rabitə protokollarının doğurduğu təhlükələr</li>
+                    <li>Quantum kriptoqrafiyaya keçid və onun şəbəkə təhlükəsizliyinə təsiri</li>
+                </ul>
+
+                <h2>12. Nəticə</h2>
+                <p>Şəbəkə təhlükəsizliyi — sadəcə firewall və antivirus səviyyəsində deyil — çoxşaxəli və kompleks bir yanaşma tələb edən bir sahədir. Dövlət qurumları və kritik infrastruktur sahibləri bu məsələyə strateji səviyyədə yanaşmalı, insan, texnologiya və proses balansını düzgün qurmalıdırlar. Müasir dövrdə məlumat döyüşünün aparıldığı bir vaxtda, güclü şəbəkə təhlükəsizliyi infrastrukturu, milli təhlükəsizliyin ayrılmaz bir hissəsinə çevrilmişdir.</p>
             </div>
         </section>
 
@@ -77,6 +205,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
