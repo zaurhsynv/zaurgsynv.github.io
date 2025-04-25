@@ -3,52 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Scripting - Zaur's Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Zaur Hüseynov</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
     <div class="content">
         <header>
-            <h1>Python Scripting</h1>
-            <p class="subtitle">Automation & Security Tools</p>
+            <h1>Python və Kiber Təhlükəsizlik</h1>
+            <p class="subtitle">Ən Güclü Alətlərdən Birinin Dərin İcmalı</p>
         </header>
         
         <nav>
             <ul>
                 <li><a href="../../index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>Python Scripting Haqqında</h2>
-            <div class="about-content">
-                <p>Python Scripting, təhlükəsizlik avtomatlaşdırması və alətlərinin hazırlanması üçün istifadə olunan güclü bir proqramlaşdırma dilidir.</p>
-
-                <p>Python Scripting sahəsində əsas fokus nöqtələri:</p>
+        <section id="content">
+            <h2>1. Giriş: Niyə Məhz Python?</h2>
+            <div class="article-content">
+                <p>Python bu gün bir çox sahədə - elmi tədqiqatlardan veb inkişafına qədər - istifadə olunur. Lakin onun kiber təhlükəsizlikdəki yeri xüsusi bir önəm daşıyır. Bunun əsas səbəbləri:</p>
                 <ul>
-                    <li>Network scanning və enumeration</li>
-                    <li>Web scraping və analiz</li>
-                    <li>Exploit development</li>
-                    <li>Security tool development</li>
-                    <li>Automation scripts</li>
-                    <li>Data analysis və processing</li>
+                    <li>Oxunaqlı sintaksis və sadə struktur</li>
+                    <li>Zəngin kitabxana ekosistemi</li>
+                    <li>Sürətli prototipləmə və avtomatlaşdırma qabiliyyəti</li>
+                    <li>Linux və Windows mühitlərində rahat işləmə bacarığı</li>
+                    <li>Etibarlı socket və şəbəkə proqramlaşdırması dəstəyi</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Python Scripting Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Proyekt 1</h3>
-                    <p>Proyekt açıqlaması burada yer alacaq.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>2. Kiber Təhlükəsizlikdə Python-un İstifadə Sahələri</h2>
+                <h3>2.1. Pentest və Red Team Əməliyyatları</h3>
+                <ul>
+                    <li>Avtomatlaşdırılmış zəiflik skanerləri: Python ilə CVE-lər üçün POC yazmaq, exploit hazırlamaq mümkündür.</li>
+                    <li>Əl ilə test üçün skriptlər: Məsələn, SQL injeksiya yoxlaması, XSS testləri, subdomain discovery.</li>
+                    <li>Custom port scanner-lər: socket, scapy, nmap kitabxanaları ilə port analizləri aparmaq mümkündür.</li>
+                </ul>
+
+                <h3>2.2. Network Təhlili və Sniffing</h3>
+                <ul>
+                    <li>Scapy kitabxanası ilə paketlər yaradıb analiz etmək</li>
+                    <li>PyShark, DPKT, socket ilə real zamanlı şəbəkə trafiki oxumaq</li>
+                    <li>ARP spoofing, DNS poisoning kimi hücum simulyasiyaları yazmaq</li>
+                </ul>
+
+                <h3>2.3. Malware Analizi və Reverse Engineering</h3>
+                <ul>
+                    <li>Şübhəli proqramın davranış analizini avtomatlaşdırmaq</li>
+                    <li>pefile, lief, yara-python kitabxanaları ilə Windows PE fayllarını təhlil etmək</li>
+                    <li>Sandboxing mühitində dinamik analiz skriptləri yazmaq</li>
+                </ul>
+
+                <h3>2.4. Forensic və Log Analizi</h3>
+                <ul>
+                    <li>Log fayllarından IOC-lərin (Indicators of Compromise) çıxarılması</li>
+                    <li>Time-stamp dəyişikliklərinin təhlili</li>
+                    <li>Linux/Windows sistemlərindən artefaktların toplanması (os, glob, shutil ilə)</li>
+                </ul>
+
+                <h3>2.5. OSINT və Reconnaissance</h3>
+                <ul>
+                    <li>Shodan, Censys API inteqrasiyası</li>
+                    <li>Google dorking və dork skanerləri</li>
+                    <li>WHOIS, DNS, geoIP analiz skriptləri</li>
+                </ul>
+
+                <h3>2.6. SOC və SIEM Platformalarında Python</h3>
+                <ul>
+                    <li>Log normalizasiyası və korelyasiya</li>
+                    <li>Real-time alert generation (pandas, numpy, json, re)</li>
+                    <li>Python ilə SIEM plugin-lərinin və connector-larının yazılması</li>
+                </ul>
+
+                <h2>3. Populyar Kitabxanalar və Frameworklər</h2>
+                <table>
+                    <tr>
+                        <th>Kateqoriya</th>
+                        <th>Kitabxanalar / Tools</th>
+                    </tr>
+                    <tr>
+                        <td>Şəbəkə Proqramlaşdırma</td>
+                        <td>socket, scapy, dpkt, netmiko, paramiko</td>
+                    </tr>
+                    <tr>
+                        <td>Veb Təhlükəsizlik</td>
+                        <td>requests, mechanize, beautifulsoup4, selenium</td>
+                    </tr>
+                    <tr>
+                        <td>Forensika</td>
+                        <td>pefile, yara, volatility3, pytsk3</td>
+                    </tr>
+                    <tr>
+                        <td>Sızma Testi</td>
+                        <td>impacket, sqlmapapi, pwntools, exploitdb</td>
+                    </tr>
+                    <tr>
+                        <td>OSINT</td>
+                        <td>shodan, censys, theHarvester, maltego</td>
+                    </tr>
+                    <tr>
+                        <td>Şifrələmə və hashing</td>
+                        <td>hashlib, cryptography, PyCryptoDome</td>
+                    </tr>
+                    <tr>
+                        <td>SIEM / SOC</td>
+                        <td>pandas, numpy, elasticsearch-py, kibana-api</td>
+                    </tr>
+                </table>
+
+                <h2>4. Python ilə Real Dünyadan Ssenarilər</h2>
+                <h3>Ssenari 1: SSH Brute Force Skripti</h3>
+                <p>Python-un paramiko kitabxanası ilə SSH login testləri aparmaq mümkündür. Real sızma testlərində istifadə edilə bilər.</p>
+
+                <h3>Ssenari 2: DNS Tünelləşdirmə Aləti</h3>
+                <p>Python ilə DNS sorğuları vasitəsilə məlumat ötürmək (data exfiltration) mümkündür.</p>
+
+                <h3>Ssenari 3: Şəbəkə Sniffer və Paket Analizatoru</h3>
+                <p>Scapy ilə ICMP, DNS, TCP paketlərini sniffləyib analiz edən skriptlər yazmaq mümkündür.</p>
+
+                <h2>5. Python ilə DevSecOps</h2>
+                <p>Python CI/CD boru xətləri üçün təhlükəsizlik testləri avtomatlaşdırmağa geniş imkanlar yaradır:</p>
+                <ul>
+                    <li>SAST (Static Analysis): bandit, pylint, semgrep</li>
+                    <li>DAST (Dynamic Analysis): Selenium ilə veb testləri</li>
+                    <li>Secret scanning: truffleHog, detect-secrets</li>
+                </ul>
+
+                <h2>6. Etik Hacker və Təhlükəsizlik Mühəndisləri üçün Python Tövsiyələri</h2>
+                <h3>Mütləq Öyrəniləcək Mövzular:</h3>
+                <ul>
+                    <li>requests, os, sys, subprocess, argparse istifadə qaydaları</li>
+                    <li>JSON/XML parsing</li>
+                    <li>Regex (re) ilə mətn təhlili</li>
+                    <li>API istifadəsi və automation</li>
+                </ul>
+
+                <h3>Məşhur Kitablar:</h3>
+                <ul>
+                    <li>"Black Hat Python"</li>
+                    <li>"Violent Python"</li>
+                    <li>"Python For Offensive Security"</li>
+                    <li>"Blue Team Handbook with Python"</li>
+                </ul>
+
+                <h2>7. Tədris Resursları və Platformalar</h2>
+                <ul>
+                    <li>HackTheBox Academy – Python ilə avtomatlaşdırılmış pentestlər</li>
+                    <li>TryHackMe Rooms – "Python for Pentesters"</li>
+                    <li>INE və TCM Security kursları</li>
+                    <li>PortSwigger Labs – Burp Suite extensiyalarının Python ilə yazılması</li>
+                </ul>
+
+                <h2>8. Gələcək Perspektivlər: AI və Python</h2>
+                <p>Python, süni intellektin kiber təhlükəsizlik sahəsində tətbiqində də ön sıralarda yer alır:</p>
+                <ul>
+                    <li>Anomaliya aşkarlanması (ML ilə intrusion detection)</li>
+                    <li>Phishing URL detection (NLP ilə)</li>
+                    <li>Malware classification (TensorFlow, Scikit-learn)</li>
+                    <li>SIEM sistemlərində avtomatik təhlil</li>
+                </ul>
+
+                <h2>9. Nəticə: Python – Kibertəhlükəsizlikdə Universal Alət</h2>
+                <p>Python həm sızma testçisi, həm təhlükəsizlik analitiki, həm də SOC mühəndisi üçün universal bir silahdır. Onun elastikliyi, güclü kitabxana dəstəyi və sürətli inkişaf mühiti kibertəhlükəsizliyin müxtəlif istiqamətlərində özünü doğruldur. Bu sahədə inkişaf etmək istəyənlər üçün Python bilikləri yalnız üstünlük deyil, həm də zərurətdir.</p>
             </div>
         </section>
 
@@ -67,6 +186,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
