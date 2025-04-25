@@ -562,4 +562,87 @@ section p {
     .skill .second-word {
         font-size: 0.8em;
     }
+}
+
+/* Scrollbar Stili */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff00;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc00;
+}
+
+/* PowerShell Səhifəsi Stili */
+.article-content pre {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.article-content code {
+    font-family: 'JetBrains Mono', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #00ff00;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    white-space: pre;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.article-content h2,
+.article-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    clear: both;
+}
+
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.article-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.article-content table {
+    margin: 1.5rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.article-content table td,
+.article-content table th {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 } 
