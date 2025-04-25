@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bash Scripting - Zaur's Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
+    <title>Zaur Hüseynov</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -12,43 +12,169 @@
     <div class="content">
         <header>
             <h1>Bash Scripting</h1>
-            <p class="subtitle">Linux Automation & Security</p>
+            <p class="subtitle">Linux Avtomatlaşdırmasının Gücü</p>
         </header>
         
         <nav>
             <ul>
                 <li><a href="../../index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>Bash Scripting Haqqında</h2>
-            <div class="about-content">
-                <p>Bash Scripting, Linux sistemlərində avtomatlaşdırma və təhlükəsizlik tapşırıqlarını yerinə yetirmək üçün istifadə olunan güclü bir skript dilidir.</p>
+        <section id="content">
+            <h2>1. Giriş: Bash nədir?</h2>
+            <div class="article-content">
+                <p>Bash (Bourne Again SHell) — Unix və Linux əsaslı əməliyyat sistemlərində işləyən ən geniş yayılmış komanda sətri interpreteridir. Bash yalnız interaktiv terminal mühiti üçün deyil, həm də sistem əməliyyatlarının avtomatlaşdırılması üçün ssenarilər yazmaq üçün geniş istifadə olunur.</p>
 
-                <p>Bash Scripting sahəsində əsas fokus nöqtələri:</p>
+                <h2>2. Bash Scripting nədir?</h2>
+                <p>Bash scripting, ardıcıl əmrləri .sh uzantılı fayl daxilində yazaraq onları avtomatik və sistemli şəkildə icra etməyə imkan verən bir texnikadır. Bu ssenarilər, sistem adminləri, DevOps mütəxəssisləri, və təhlükəsizlik mühəndisləri üçün əvəzolunmaz alətlərdir.</p>
+
+                <h2>3. Bash Scripting ilə Nələr Etmək Olar?</h2>
                 <ul>
-                    <li>System administration avtomatlaşdırması</li>
-                    <li>Security monitoring və log analizi</li>
-                    <li>Network scanning və enumeration</li>
-                    <li>File system analizi və monitoring</li>
-                    <li>Process management və automation</li>
-                    <li>Security hardening scripts</li>
+                    <li>Sistem ehtiyat nüsxələrinin avtomatlaşdırılması</li>
+                    <li>Şəbəkə monitorinqi</li>
+                    <li>Sistem log analizləri</li>
+                    <li>Fayl sisteminin idarə olunması</li>
+                    <li>Paketlərin avtomatik quraşdırılması</li>
+                    <li>Web pentest avtomatlaşdırması</li>
+                    <li>CTF challenge-lərdə tez exploit prototipləmə</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Bash Scripting Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Proyekt 1</h3>
-                    <p>Proyekt açıqlaması burada yer alacaq.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>4. Bash Skriptinin Quruluşu</h2>
+                <p>Ən sadə skript belə görünür:</p>
+                <pre><code>#!/bin/bash
+echo "Salam Dünya"</code></pre>
+                <p>Tərkib hissələri:</p>
+                <ul>
+                    <li><code>#!/bin/bash</code> — shebang, skriptin Bash tərəfindən icra olunacağını göstərir</li>
+                    <li><code>echo</code> — ekrana mesaj çıxaran əmrdir</li>
+                </ul>
+
+                <h2>5. Əsas Strukturlar</h2>
+                <h3>5.1. Dəyişənlər</h3>
+                <pre><code>ad="Pərvanə"
+echo "Salam, $ad!"</code></pre>
+
+                <h3>5.2. İf-Else Blokları</h3>
+                <pre><code>if [ -f /etc/passwd ]; then
+  echo "Fayl mövcuddur"
+else
+  echo "Fayl tapılmadı"
+fi</code></pre>
+
+                <h3>5.3. Dövrlər (Loops)</h3>
+                <p>for dövrü:</p>
+                <pre><code>for i in {1..5}
+do
+  echo "Nömrə: $i"
+done</code></pre>
+
+                <p>while dövrü:</p>
+                <pre><code>x=1
+while [ $x -le 5 ]
+do
+  echo "Dəyər: $x"
+  ((x++))
+done</code></pre>
+
+                <h2>6. Funksiyalar</h2>
+                <pre><code>salamla() {
+  echo "Salam, $1"
+}
+
+salamla "Cyberus"</code></pre>
+
+                <h2>7. Fayl və Kataloq Əməliyyatları</h2>
+                <p>Fayl mövcuddurmu?</p>
+                <pre><code>if [ -e myfile.txt ]; then
+  echo "Fayl var"
+fi</code></pre>
+
+                <p>Kataloq yaratmaq:</p>
+                <pre><code>mkdir -p /var/backups/$(date +%F)</code></pre>
+
+                <h2>8. Bash-da Şəbəkə Əmrləri</h2>
+                <ul>
+                    <li>Ping test: <code>ping -c 1 8.8.8.8</code></li>
+                    <li>Port yoxlaması: <code>nc -zv 192.168.1.1 22</code></li>
+                    <li>Web səhifə yükləmək: <code>curl https://example.com</code></li>
+                </ul>
+
+                <h2>9. Kiber Təhlükəsizlikdə Bash Scripting</h2>
+                <h3>9.1. Recon (Kəşfiyyat)</h3>
+                <p>Subdomain enumeration:</p>
+                <pre><code>for sub in www mail ftp test
+do
+  host $sub.target.com
+done</code></pre>
+
+                <h3>9.2. Port scanning (nc ilə)</h3>
+                <pre><code>for port in {20..25}
+do
+  nc -zv 192.168.1.100 $port 2>&1 | grep succeeded
+done</code></pre>
+
+                <h3>9.3. Wordlist Brute-force</h3>
+                <pre><code>while read password; do
+  echo "Yoxlanır: $password"
+done < wordlist.txt</code></pre>
+
+                <h2>10. Real Dünya Ssenariləri</h2>
+                <h3>Ssenari 1: Günlük log backup skripti</h3>
+                <pre><code>#!/bin/bash
+tar -czf /backup/logs_$(date +%F).tar.gz /var/log</code></pre>
+
+                <h3>Ssenari 2: SSH girişlərini yoxlayan skript</h3>
+                <pre><code>grep "Accepted password" /var/log/auth.log | awk '{print $1,$2,$3,$11}'</code></pre>
+
+                <h3>Ssenari 3: Web server status monitoru</h3>
+                <pre><code>status=$(curl -s -o /dev/null -w "%{http_code}" https://example.com)
+if [ $status -ne 200 ]; then
+  echo "Sayt DOWN: $status"
+fi</code></pre>
+
+                <h2>11. Bash vs Python</h2>
+                <table>
+                    <tr>
+                        <th>Əsas Metrika</th>
+                        <th>Bash</th>
+                        <th>Python</th>
+                    </tr>
+                    <tr>
+                        <td>Syntax</td>
+                        <td>Sadə, shell mərkəzli</td>
+                        <td>Daha çox struktur tələb edir</td>
+                    </tr>
+                    <tr>
+                        <td>Avtomatlaşdırma</td>
+                        <td>Fayl, şəbəkə, sistem işləri üçün ideal</td>
+                        <td>Çoxfunksiyalı, geniş API</td>
+                    </tr>
+                    <tr>
+                        <td>Sürət</td>
+                        <td>Kiçik işlər üçün çox sürətli</td>
+                        <td>Böyük layihələrdə daha sabit</td>
+                    </tr>
+                    <tr>
+                        <td>Tətbiq sahəsi</td>
+                        <td>Sysadmin, DevOps</td>
+                        <td>AI, Pentest, SIEM, API s.</td>
+                    </tr>
+                </table>
+
+                <h2>12. Tədris Resursları</h2>
+                <ul>
+                    <li>Explainshell.com</li>
+                    <li>LinuxCommand.org</li>
+                    <li>OverTheWire: Bandit</li>
+                    <li>TryHackMe: Bash Basics</li>
+                    <li>TLDP Bash Guide</li>
+                </ul>
+
+                <h2>13. Nəticə</h2>
+                <p>Bash scripting, Linux sistemlərində təkrarlanan tapşırıqları avtomatlaşdırmaq, sistemləri idarə etmək və sızma testlərini asanlaşdırmaq üçün ideal bir vasitədir. Təhlükəsizlik mütəxəssisləri və DevSecOps mühəndisləri üçün bash bilikləri vacib bacarıqlardandır.</p>
             </div>
         </section>
 
@@ -67,6 +193,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
